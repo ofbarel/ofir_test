@@ -9,12 +9,6 @@ from .factory import Factory
 future_engine = future_create_engine("sqlite:////home/ofir/fast.db", echo=True)
 
 
-def get_user_orm():
-    emp_cursor = Employee()
-    user = select(emp_cursor).where(emp_cursor.c.id == 111)
-    print(user)
-
-
 def add_user(id: int, name: str, salary: int = None, factory=3):
     print("-------------------------add_user--------------------------")
     with Session(future_engine) as session:
@@ -31,7 +25,6 @@ def add_user(id: int, name: str, salary: int = None, factory=3):
 
 
 def remove_user(id: int):
-    print("-------------------------remove_user--------------------------")
     with Session(future_engine) as session:
         query = session.query(Employee).filter(Employee.id == id)
         emp = session.execute(query).first()
@@ -44,7 +37,6 @@ def remove_user(id: int):
 
 
 def get_user_sql():
-    print("-------------------------get_user_sql--------------------------")
     with Session(future_engine) as session:
         query = select(Employee).where(Employee.id == 333)
         resp = session.execute(query)

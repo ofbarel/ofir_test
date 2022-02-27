@@ -1,10 +1,9 @@
-from datetime import datetime
 from fastapi import FastAPI
 from asyncio import run
 from sqlalchemy import create_engine
 
-from sql_test import initialize_db, show_data, show_data_2, show_all
-from db.db_handler import get_user_sql, get_user_orm, add_user, remove_user, create_db, show_all_orm
+from sql_test import show_data, show_data_2, show_employee
+from db.db_handler import add_user, remove_user, create_db, show_all_orm
 
 app = FastAPI()
 
@@ -17,15 +16,13 @@ async def root():
 @app.get("/2")
 def root2():
     resp = show_data_2()
-    print("bla")
     print(resp)
-
     return {"message": "222", "resp": resp}
 
 
 @app.get("/get_all")
 def get_all():
-    print(show_all())
+    print(show_employee())
 
 
 print(app)

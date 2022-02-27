@@ -15,15 +15,10 @@ def create_db():
     conn.commit()
 
 
-
-
 def show_data():
     with future_engine.begin() as conn:
         result = conn.execute(text("SELECT 'hello world', 1 + 5"))
         resp = result.all()
-        print(f"1 : {resp}")
-        print(f"2 : {resp}")
-
         return resp
 
 
@@ -36,17 +31,10 @@ def show_data_2():
     return resp
 
 
-def show_all():
-    print("-------------------------show_all--------------------------")
+def show_employee():
     resp = []
     with future_engine.begin() as conn:
         result = conn.execute(text("SELECT * FROM employee"))
         for row in result:
             resp.append(f"id: {row.id} , name : {row.name} , salary : {row.salary} ")
     return resp
-
-
-
-def initialize_db():
-    create_db()
-    print("done")
