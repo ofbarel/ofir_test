@@ -36,9 +36,13 @@ jobs:
 #        run: python main.py
 
       - name: run python version
-        #        run: python main.py 123 456
         run: python -V
 
-      - name: ls to get local files and folders
-        #        run: python main.py 123 456
+      - name: get local files and folders
         run: ls -l
+
+      - name: pwd
+        run: pwd
+
+      - name: checkout to main
+        uses: actions/checkout@v3
