@@ -1,6 +1,10 @@
 import sys
 
 
+def print_arg(arg):
+    print(f"arg received : {arg}")
+
+
 def start():
     print("this works")
     return "start finished"
