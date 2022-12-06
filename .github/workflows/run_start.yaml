@@ -5,13 +5,12 @@ on:
     branches: [ "main" ]
 jobs:
   build:
+
     runs-on: ubuntu-latest
+    name: run start function
 
-  name: run start function
-  runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
 
-  steps:
-    - uses: actions/checkout@v3
-
-    - run: python main.py
+      - run: python main.py
 
