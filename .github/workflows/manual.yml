@@ -47,4 +47,4 @@ jobs:
         run: python main.py "${{ github.event.inputs.other }}"
 
       - name: run start function
-        run: python -c 'from main import start; print start("${{ github.event.inputs.other }}")'
+        run: python -c 'from main import print_arg; print(print_arg("${{ github.event.inputs.other }}"));'

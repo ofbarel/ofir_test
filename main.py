@@ -3,6 +3,7 @@ import sys
 
 def print_arg(arg):
     print(f"arg received : {arg}")
+    return "print_arg"
 
 
 def start():
