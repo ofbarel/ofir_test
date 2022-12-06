@@ -1,4 +1,4 @@
-name: test first github action
+name: run the start function
 
 on:
   push:
