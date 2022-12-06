@@ -4,7 +4,7 @@ on:
   push:
     branches: [ "main" ]
 jobs:
-  name: run container and print this_works
+  name: run start function
 
   runs-on: ubuntu-latest
 
