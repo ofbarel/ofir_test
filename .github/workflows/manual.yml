@@ -34,3 +34,11 @@ jobs:
       - name: run main with args
         #        run: python main.py 123 456
         run: python main.py
+
+      - name: run python version
+        #        run: python main.py 123 456
+        run: python -V
+
+      - name: ls to get local files and folders
+        #        run: python main.py 123 456
+        run: ls -l
