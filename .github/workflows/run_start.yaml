@@ -4,11 +4,14 @@ on:
   push:
     branches: [ "main" ]
 jobs:
-  name: run start function
+  build:
+    runs-on: ubuntu-latest
 
+  name: run start function
   runs-on: ubuntu-latest
 
   steps:
     - uses: actions/checkout@v3
+
     - run: python main.py
 
