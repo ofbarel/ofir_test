@@ -15,7 +15,7 @@ on:
         default: 'World'
         # Input has to be provided for the workflow to run
         required: true
-      ofir-key:
+      other:
         default: 'stam'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -31,10 +31,6 @@ jobs:
       - name: Send greeting
         run: echo "Hello ${{ github.event.inputs.name }}"
 
-#      - name: run main with args
-        #        run: python main.py 123 456
-#        run: python main.py
-
       - name: run python version
         run: python -V
 
@@ -46,3 +42,6 @@ jobs:
 
       - name: checkout to main
         uses: actions/checkout@v3
+
+      - name: run main with args
+        run: python main.py 123 456 ${{ github.event.inputs.other }}"
