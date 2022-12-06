@@ -4,7 +4,7 @@ on:
   push:
     branches: [ "main" ]
 jobs:
-  build:
+  ofir-job:
 
     runs-on: ubuntu-latest
     name: run start function
