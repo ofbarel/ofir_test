@@ -1,0 +1,12 @@
+name: test first github action
+
+on:
+    push:
+        branches: [ "main" ]
+jobs:
+    runs-on: ubuntu-latest
+
+    steps:
+        - uses: actions/checkout@v3
+        - run: python main.py
+
