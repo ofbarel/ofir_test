@@ -52,4 +52,4 @@ jobs:
         run: python -c 'from main import print_arg; print(print_arg("${{ github.event.inputs.other }}"));'
 
       - name: return true if arg is zero else false
-        run: python -c 'from main import return_bool_by_arg; print(return_bool_by_arg(1);'
+        run: python -c 'from main import return_bool_by_arg; print(return_bool_by_arg(1)) ;'
