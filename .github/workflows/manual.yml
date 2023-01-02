@@ -17,7 +17,6 @@ on:
         required: true
       other:
         default: 'stam'
-      bool_arg: 1
 
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -53,4 +52,4 @@ jobs:
         run: python -c 'from main import print_arg; print(print_arg("${{ github.event.inputs.other }}"));'
 
       - name: return true if arg is zero else false
-        run: python -c 'from main import return_bool_by_arg; print(return_bool_by_arg("${{ github.event.inputs.bool_arg }}");'
+        run: python -c 'from main import return_bool_by_arg; print(return_bool_by_arg(1);'
