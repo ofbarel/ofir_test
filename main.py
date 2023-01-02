@@ -1,6 +1,10 @@
 import sys
 
 
+def return_bool_by_arg(arg: int):
+    return True if arg else False
+
+
 def print_arg(arg):
     print(f"arg received : {arg}")
     return "print_arg"
