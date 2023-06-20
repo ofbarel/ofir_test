@@ -39,9 +39,6 @@ jobs:
       - name: get local files and folders
         run: ls -l
 
-      - name: pwd
-        run: pwd
-
       - name: checkout to main
         uses: actions/checkout@v3
 

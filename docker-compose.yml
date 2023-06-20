@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  voli:
+    platform: linux/amd64
+    build: .
+    volumes:
+      - ./src:/app
+    ports:
+      - "5555:5555"
+    environment:
+      - KEY=VAL
+    working_dir: /app
